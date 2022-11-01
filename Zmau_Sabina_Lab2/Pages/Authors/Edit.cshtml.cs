@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Zmau_Sabina_Lab2.Data;
 using Zmau_Sabina_Lab2.Models;
 
 namespace Zmau_Sabina_Lab2.Pages.Authors
@@ -30,7 +24,7 @@ namespace Zmau_Sabina_Lab2.Pages.Authors
                 return NotFound();
             }
 
-            var author =  await _context.Author.FirstOrDefaultAsync(m => m.ID == id);
+            var author = await _context.Author.FirstOrDefaultAsync(m => m.ID == id);
             if (author == null)
             {
                 return NotFound();
@@ -71,7 +65,7 @@ namespace Zmau_Sabina_Lab2.Pages.Authors
 
         private bool AuthorExists(int id)
         {
-          return _context.Author.Any(e => e.ID == id);
+            return _context.Author.Any(e => e.ID == id);
         }
     }
 }

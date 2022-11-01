@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using Zmau_Sabina_Lab2.Data;
 var builder = WebApplication.CreateBuilder(args);
 

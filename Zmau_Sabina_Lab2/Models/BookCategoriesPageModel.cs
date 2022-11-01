@@ -2,7 +2,7 @@
 using Zmau_Sabina_Lab2.Data;
 namespace Zmau_Sabina_Lab2.Models
 {
-    public class BookCategoriesPageModell : PageModel
+    public class BookCategoriesPageModel : PageModel
     {
         public List<AssignedCategoryData> AssignedCategoryDataList;
         public void PopulateAssignedCategoryData(Zmau_Sabina_Lab2Context context,

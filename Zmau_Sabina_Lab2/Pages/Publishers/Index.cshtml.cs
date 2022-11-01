@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
+﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using Zmau_Sabina_Lab2.Data;
 using Zmau_Sabina_Lab2.Models;
 
 namespace Zmau_Sabina_Lab2.Pages.Publishers
@@ -19,7 +13,7 @@ namespace Zmau_Sabina_Lab2.Pages.Publishers
             _context = context;
         }
 
-        public IList<Publisher> Publisher { get;set; } = default!;
+        public IList<Publisher> Publisher { get; set; } = default!;
 
         public async Task OnGetAsync()
         {

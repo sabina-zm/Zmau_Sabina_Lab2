@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.Xml.Linq;
 
 namespace Zmau_Sabina_Lab2.Models
 {
@@ -9,7 +8,7 @@ namespace Zmau_Sabina_Lab2.Models
         public string FirstName { get; set; }
         public string LastName { get; set; }
         [Display(Name = "Author Name")]
-        public string FullName { get { return FirstName+" "+LastName; } }
+        public string FullName { get { return FirstName + " " + LastName; } }
         public ICollection<Book>? Books { get; set; }
     }
 }

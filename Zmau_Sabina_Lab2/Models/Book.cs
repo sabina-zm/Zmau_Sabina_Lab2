@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using System.Xml.Linq;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Zmau_Sabina_Lab2.Models
 {
@@ -26,5 +25,5 @@ namespace Zmau_Sabina_Lab2.Models
         public ICollection<BookCategory>? BookCategories { get; set; }
     }
 
-} 
+}
 
