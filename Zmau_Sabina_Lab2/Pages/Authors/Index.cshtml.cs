@@ -15,6 +15,7 @@ namespace Zmau_Sabina_Lab2.Pages.Authors
 
         public IList<Author> Author { get; set; } = default!;
 
+
         public async Task OnGetAsync()
         {
             if (_context.Author != null)
