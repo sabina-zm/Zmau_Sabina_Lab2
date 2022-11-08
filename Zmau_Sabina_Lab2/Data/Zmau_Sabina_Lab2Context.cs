@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Zmau_Sabina_Lab2.Models;
 
 namespace Zmau_Sabina_Lab2.Data
 {
@@ -16,5 +17,9 @@ namespace Zmau_Sabina_Lab2.Data
         public DbSet<Zmau_Sabina_Lab2.Models.Author> Author { get; set; }
 
         public DbSet<Zmau_Sabina_Lab2.Models.Category> Category { get; set; }
+
+        public DbSet<Zmau_Sabina_Lab2.Models.Member> Member { get; set; }
+
+        public DbSet<Zmau_Sabina_Lab2.Models.Borrowing> Borrowing { get; set; }
     }
 }
