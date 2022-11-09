@@ -35,9 +35,17 @@ namespace Zmau_Sabina_Lab2.Pages.Borrowings
             {
                 return NotFound();
             }
+            var bookList = _context.Book
+           .Include(b => b.Author)
+            .Select(x => new
+            {
+                x.ID,
+                BookFullName = x.Title + " - " + x.Author.LastName + " " +
+           x.Author.FirstName
+            });
             Borrowing = borrowing;
-           ViewData["BookID"] = new SelectList(_context.Book, "ID", "ID");
-           ViewData["MemberID"] = new SelectList(_context.Member, "ID", "ID");
+           ViewData["BookTitle"] = new SelectList(bookList, "ID","BookFullName");
+            ViewData["MemberFullName"] = new SelectList(_context.Member, "ID","FullName");
             return Page();
         }
 
