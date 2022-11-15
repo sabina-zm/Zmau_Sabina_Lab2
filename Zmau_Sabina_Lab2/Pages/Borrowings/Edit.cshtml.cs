@@ -41,11 +41,11 @@ namespace Zmau_Sabina_Lab2.Pages.Borrowings
             {
                 x.ID,
                 BookFullName = x.Title + " - " + x.Author.LastName + " " +
-           x.Author.FirstName
+                x.Author.FirstName
             });
-            Borrowing = borrowing;
-           ViewData["BookTitle"] = new SelectList(bookList, "ID","BookFullName");
-            ViewData["MemberFullName"] = new SelectList(_context.Member, "ID","FullName");
+            
+            ViewData["BookID"] = new SelectList(bookList, "ID","BookFullName");
+            ViewData["MemberID"] = new SelectList(_context.Member, "ID","FullName");
             return Page();
         }
 
